@@ -100,12 +100,12 @@ function Leader() {
               <div className="card">
                 <div className="card__header">
                   <div className="card__header-left">
-                    <h3 className="card__title">Stars_Bot</h3>
+                    <h3 className="card__title">Kosmo_Bot</h3>
                   </div>
                 </div>
                 <div className="card__body">
                   Хочешь быть в курсе всех новостей, оперативно отслеживать все регистрации и
-                  финансовые операции в своём кабинете? Специально для тебя у нас есть StarsBot,{' '}
+                  финансовые операции в своём кабинете? Специально для тебя у нас есть KosmoBot,{' '}
                   <br />
                   <br />
                   <strong style={{ color: '#00C3E1' }}>
@@ -113,11 +113,7 @@ function Leader() {
                   </strong>
                   <br />
                   <br />
-                  <Button
-                    tag="a"
-                    color="primary"
-                    href={`https://t.me/Starsinfo_bot?start=${userInfo.tgKey}`}
-                  >
+                  <Button tag="a" color="primary" href={``}>
                     Вступить
                   </Button>
                 </div>

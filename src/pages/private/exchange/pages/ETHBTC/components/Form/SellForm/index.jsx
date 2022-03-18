@@ -92,7 +92,7 @@ const SellFormComponent = ({ priceSell }) => {
             </div>
           </div>
           <div className="line">
-            <span>Всего-Ком:</span>
+            <span>Всег-Ком:</span>
             <div className="poles">
               <Input name="totalfee" maxLength="25" type="text" value={netAmount} disabled="">
                 {formatCurrency(netAmount, optsIDR)}

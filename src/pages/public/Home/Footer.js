@@ -18,7 +18,7 @@ function Footer() {
         <div className="footer__social">
           <a
             className="footer__social-link"
-            href="https://t.me/joinchat/5trTW-xurLRlN2Uy"
+            href="https://t.me/kosmosmatrix"
             rel="noreferrer"
             target="_blank"
           >
@@ -51,7 +51,7 @@ function Footer() {
 
           <a
             className="footer__social-link"
-            href="https://t.me/joinchat/5trTW-xurLRlN2Uy"
+            href="https://t.me/kosmosmatrix"
             rel="noreferrer"
             target="_blank"
           >
@@ -84,7 +84,7 @@ function Footer() {
 
           <a
             className="footer__social-link"
-            href="https://instagram.com/stars_matrix?igshid=saos17iyb7lx"
+            href="https://t.me/kosmosmatrix"
             rel="noreferrer"
             target="_blank"
           >
@@ -113,7 +113,7 @@ function Footer() {
 
           <a
             className="footer__social-link"
-            href="https://www.youtube.com/channel/UCrmcF7JcICRxIYCMMnPyrrg"
+            href="https://t.me/kosmosmatrix"
             rel="noreferrer"
             target="_blank"
           >
@@ -144,12 +144,7 @@ function Footer() {
             <span>Youtube</span>
           </a>
 
-          <a
-            className="footer__social-link"
-            href="https://vk.com/public202035837"
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a className="footer__social-link" href="/" rel="noreferrer" target="_blank">
             <svg
               width="41"
               height="43"

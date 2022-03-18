@@ -67,7 +67,7 @@ function Header() {
               <div className="header__social">
                 <a
                   className="header__social-link"
-                  href="https://t.me/joinchat/5trTW-xurLRlN2Uy"
+                  href="https://t.me/kosmosmatrix"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -84,12 +84,7 @@ function Header() {
                     />
                   </svg>
                 </a>
-                <a
-                  className="header__social-link"
-                  href="https://vk.com/public202035837"
-                  rel="noreferrer"
-                  target="_blank"
-                >
+                <a className="header__social-link" href="/" rel="noreferrer" target="_blank">
                   <svg
                     width="20"
                     height="21"
@@ -103,12 +98,7 @@ function Header() {
                     />
                   </svg>
                 </a>
-                <a
-                  className="header__social-link"
-                  href="https://instagram.com/stars_matrix?igshid=saos17iyb7lx"
-                  rel="noreferrer"
-                  target="_blank"
-                >
+                <a className="header__social-link" href="/" rel="noreferrer" target="_blank">
                   <svg
                     width="20"
                     height="21"
@@ -130,12 +120,7 @@ function Header() {
                     />
                   </svg>
                 </a>
-                <a
-                  className="header__social-link"
-                  href="https://www.youtube.com/channel/UCrmcF7JcICRxIYCMMnPyrrg"
-                  rel="noreferrer"
-                  target="_blank"
-                >
+                <a className="header__social-link" href="/" rel="noreferrer" target="_blank">
                   <svg
                     width="20"
                     height="21"
