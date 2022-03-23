@@ -36,7 +36,7 @@ function Authentication() {
           </div>
           <div className="authentication__btn-wrap">
             <a
-              href="https://www.youtube.com/watch?v=Y5d4xq0QEdM&t=4s"
+              href="/"
               className="authentication__link button button--svg-evlipses authentication__btn"
               rel="noreferrer"
               target="_blank"

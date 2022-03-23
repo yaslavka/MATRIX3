@@ -550,7 +550,7 @@
   padding: 6px 25px 6px 30px;
   font-weight: 600;
   font-size: 1.375rem;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   border-radius: 6px
 }
@@ -15317,7 +15317,7 @@ body {
   font-family: "Raleway",sans-serif;
   font-weight: 1000;
   background-color: #2a0072;
-  color: #f6e1e1
+  color: #020000
 }
 
 video {
@@ -16734,7 +16734,7 @@ video {
 }
 
 .star-container {
-  background: rgba(19, 1, 50, 0) url(./media/outerspace-382.gif);
+  background: rgba(19, 1, 50, 0) url(./media/1616591578_37-p-fon-kosmos-svetlii-38.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -17038,7 +17038,7 @@ video {
 }
 
 .page {
-  background-image: url(./media/outerspace-382.gif);
+  background-image: url(./media/1616591578_37-p-fon-kosmos-svetlii-38.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -17048,7 +17048,7 @@ video {
   font-weight: 1000;
   position: -ms-device-fixed;
   overflow-x: hidden;
-  color: #fff;
+  color: #050000;
   z-index: 1
 }
 
@@ -20773,7 +20773,7 @@ video {
 }
 
 .referral-link__btn {
-  color: #fff
+  color: #000000
 }
 
 .form-control-label {

@@ -19,8 +19,8 @@ import ClonesModal from './ClonesModal'
 import BuyStatusModal from './BuyStatusModal'
 import BuyMatrixModal from './BuyMatrixModal'
 import PartnersClonesModal from './PartnersClonesModal'
-import rocketLeft from '../../../../scss/media/rocket-left.3228ab4a.svg'
-import rocketRight from '../../../../scss/media/rocket-right.3d8685d1.svg'
+import rocketLeft from '../../../../scss/media/angle-left.309b1344.svg'
+import rocketRight from '../../../../scss/media/angle-right.2219c635.svg'
 
 // eslint-disable-next-line react/prop-types
 export default function Table({ location: { state = {}, pathname } }) {

@@ -15,7 +15,11 @@ function JuegoRuleta() {
         </Col>
         <Col xl={9}>
           <Spin />
-          <iframe src="http://admiral/lobby/game/cocktail/" width="100%" height="45%" />
+          <iframe
+            src="https://eldorad.host/casino/games/lobby/game/cocktail/index.php"
+            width="100%"
+            height="100%"
+          />
         </Col>
       </Row>
     </Container>

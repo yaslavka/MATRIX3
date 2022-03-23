@@ -7,14 +7,16 @@ import news from '../../../scss/media/news.58147b12.svg'
 import question from '../../../scss/media/question.d8eb4f5a.svg'
 import money from '../../../scss/media/money-coin.1ab3ac3b.svg'
 import team from '../../../scss/media/team.9cf5738b.svg'
-import car from '../../../scss/media/car.9ce679da.svg'
-import logo from '../../../scss/media/leader.42ee91d2.svg'
+import car from '../../../scss/media/suprestar.424178cf.svg'
+import logo from '../../../scss/media/suprestar.424178cf.svg'
 import superstar from '../../../scss/media/suprestar.424178cf.svg'
-import luckyStar from '../../../scss/media/12345.png'
-import starsUp from '../../../scss/media/leader.42ee91d2.svg'
+import luckyStar from '../../../scss/media/exchange-svgrepo-com.svg'
+import starsUp from '../../../scss/media/1491254498-promopromotiondiscountdealpercentribbon_82978.svg'
+import bbb from '../../../scss/media/bbb.svg'
 
 // import megaphone from 'static/icons/megaphone.svg';
 import cap from '../../../scss/media/academic-cap.24d75e30.svg'
+import chat from '../../../scss/media/chat.svg'
 // import chat from 'static/icons/chat.svg';
 // import reviews from 'static/icons/reviews.svg';
 import gear from '../../../scss/media/gear.08e3a0ec.svg'
@@ -22,13 +24,13 @@ import leader from '../../../scss/media/leader.42ee91d2.svg'
 
 const navbarLinks = [
   {
-    label: 'Мой куратор',
+    label: 'Наставник',
     route: routes.leader,
     isDisabled: false,
     icon: leader,
   },
   {
-    label: 'Личный кабинет',
+    label: 'Кабинет',
     route: routes.dashboard,
     isDisabled: false,
     icon: user,
@@ -40,25 +42,25 @@ const navbarLinks = [
     icon: news,
   },
   {
-    label: 'MATRIX',
+    label: 'Пегас',
     route: routes.tables,
     isDisabled: false,
     icon: logo,
   },
   {
-    label: 'Matrix2',
+    label: 'Аида',
     route: routes.premiumStars,
     isDisabled: false,
     icon: car,
   },
   {
-    label: 'Matrix3',
+    label: 'Андромеда',
     route: routes.superStars,
     isDisabled: false,
     icon: superstar,
   },
   {
-    label: 'Matrix Reloaded',
+    label: 'Млечный путь',
     route: routes.starTrek,
     isDisabled: false,
     icon: logo,
@@ -79,7 +81,7 @@ const navbarLinks = [
     label: 'Игры',
     route: routes.casino,
     isDisabled: false,
-    icon: car,
+    icon: bbb,
   },
   {
     label: 'О нас',
@@ -88,15 +90,15 @@ const navbarLinks = [
     icon: question,
   },
   {
-    label: 'Финансы',
+    label: 'Кошелек',
     route: routes.finances,
     isDisabled: false,
     icon: money,
   },
   {
-    label: 'Команда',
+    label: 'Рефераллы',
     route: routes.team,
-    isDisabled: false,
+    isDisabled: true,
     icon: team,
   },
   {
@@ -112,17 +114,17 @@ const navbarLinks = [
   //   icon: megaphone,
   // },
   {
-    label: 'Обучение',
+    label: 'Торговый бот',
     route: routes.education,
     isDisabled: false,
     icon: cap,
   },
-  // {
-  //   label: 'Чат участников',
-  //   isDisabled: true,
-  //   route: routes.chat,
-  //   icon: chat,
-  // },
+  {
+    label: 'Чат участников',
+    isDisabled: false,
+    route: routes.chat,
+    icon: chat,
+  },
   // {
   //   label: 'Отзывы',
   //   route: routes.reviews,

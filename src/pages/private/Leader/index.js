@@ -19,7 +19,7 @@ function Leader() {
           <NavBar />
         </Col>
         <Col>
-          <h1 className="root-page-title">Мой куратор</h1>
+          <h1 className="root-page-title">Наставник</h1>
           {userInfo && (
             <>
               <div className="leader">

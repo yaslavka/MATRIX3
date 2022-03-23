@@ -22,6 +22,8 @@ import money from '../../../scss/media/money-coin.1ab3ac3b.svg'
 import team from '../../../scss/media/team.9cf5738b.svg'
 import cap from '../../../scss/media/academic-cap.24d75e30.svg'
 import gear from '../../../scss/media/gear.08e3a0ec.svg'
+import bbb from '../../../scss/media/bbb.svg'
+import chat from '../../../scss/media/chat.svg'
 
 const publicNavLinks = [
   {
@@ -44,13 +46,13 @@ const publicNavLinks = [
 
 const privateNavLinks = [
   {
-    label: 'Мой куратор',
+    label: 'Наставник',
     route: routes.leader,
     isDisabled: false,
     icon: leader,
   },
   {
-    label: 'Личный кабинет',
+    label: 'Кабинет',
     route: routes.dashboard,
     isDisabled: false,
     icon: user,
@@ -62,25 +64,25 @@ const privateNavLinks = [
     icon: news,
   },
   {
-    label: 'MATRIX',
+    label: 'Пегас',
     route: routes.tables,
     isDisabled: false,
     icon: logo,
   },
   {
-    label: 'Matrix2',
+    label: 'Аида',
     route: routes.premiumStars,
     isDisabled: false,
     icon: car,
   },
   {
-    label: 'Matrix3',
+    label: 'Андромеда',
     route: routes.superStars,
     isDisabled: false,
     icon: superstar,
   },
   {
-    label: 'Matrix Reloaded',
+    label: 'Млечный путь',
     route: routes.starTrek,
     isDisabled: false,
     icon: logo,
@@ -101,7 +103,7 @@ const privateNavLinks = [
     label: 'Игры',
     route: routes.casino,
     isDisabled: false,
-    icon: car,
+    icon: bbb,
   },
   {
     label: 'О нас',
@@ -110,13 +112,13 @@ const privateNavLinks = [
     icon: question,
   },
   {
-    label: 'Финансы',
+    label: 'Кошелек',
     route: routes.finances,
     isDisabled: false,
     icon: money,
   },
   {
-    label: 'Команда',
+    label: 'Рефераллы',
     route: routes.team,
     isDisabled: false,
     icon: team,
@@ -134,17 +136,17 @@ const privateNavLinks = [
   //   icon: megaphone,
   // },
   {
-    label: 'Обучение',
+    label: 'Торговый бот',
     route: routes.education,
     isDisabled: false,
     icon: cap,
   },
-  // {
-  //   label: 'Чат участников',
-  //   isDisabled: true,
-  //   route: routes.chat,
-  //   icon: chat,
-  // },
+  {
+    label: 'Чат участников',
+    isDisabled: false,
+    route: routes.chat,
+    icon: chat,
+  },
   // {
   //   label: 'Отзывы',
   //   route: routes.reviews,
@@ -257,7 +259,7 @@ export default function Header({ variant }) {
                 </button>
               </Col>
               <Col>
-                <Link to={routes.dashboard}>
+                <Link to={routes.root}>
                   <img className={styles.mainLogo} src={logo} alt="Логотип Stars" />
                 </Link>
               </Col>
