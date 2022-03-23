@@ -98,7 +98,7 @@ const navbarLinks = [
   {
     label: 'Рефераллы',
     route: routes.team,
-    isDisabled: true,
+    isDisabled: false,
     icon: team,
   },
   {
