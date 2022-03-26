@@ -17,13 +17,6 @@ function UserInfo({ className }) {
             className="user-info__avatar"
             url={userInfo.avatar && `${process.env.REACT_APP_BASE_URL}${userInfo.avatar}`}
           />
-          <div className="user-info__names">
-            <div>{`${userInfo.firstName} ${userInfo.lastName}`}</div>
-            <span>{userInfo.username}</span>
-          </div>
-          <div className="user-info__bell">
-            <img src={bell} alt="" />
-          </div>
         </>
       )}
     </div>

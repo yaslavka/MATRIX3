@@ -64,6 +64,12 @@ const privateNavLinks = [
     icon: news,
   },
   {
+    label: 'Пегас uno',
+    route: routes.matrixs,
+    isDisabled: false,
+    icon: logo,
+  },
+  {
     label: 'Пегас',
     route: routes.tables,
     isDisabled: false,

@@ -5,20 +5,20 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import { api } from '../../../api'
-import logo from '../../../scss/media/ss-logo-text.5a65c676.svg'
-import pdfPreview from '../../../scss/media/pdf-preview-super-star.b7bfc954.jpg'
-import pptRU from '../../../static/documents/star/Новый текстовый документ.txt'
-import pptMN from '../../../static/documents/star/Новый текстовый документ.txt'
-import pptKZ from '../../../static/documents/star/Новый текстовый документ.txt'
-import pptEN from '../../../static/documents/star/Новый текстовый документ.txt'
-import pptES from '../../../static/documents/star/Новый текстовый документ.txt'
+//import logo from '../../../scss/media/ss-logo-text.5a65c676.svg'
+//import pdfPreview from '../../../scss/media/pdf-preview-super-star.b7bfc954.jpg'
+//import pptRU from '../../../static/documents/star/Новый текстовый документ.txt'
+//import pptMN from '../../../static/documents/star/Новый текстовый документ.txt'
+//import pptKZ from '../../../static/documents/star/Новый текстовый документ.txt'
+//import pptEN from '../../../static/documents/star/Новый текстовый документ.txt'
+//import pptES from '../../../static/documents/star/Новый текстовый документ.txt'
 import { matrixActions } from '../../../store/matrix/actions'
 import styles from './SuperStars.module.scss'
 
 import TablesElement from '../Star/TablesElement'
 import NavBar from '../../../components/layout/Navbar'
-import UserInfo from '../../../components/UserInfo'
-import Icon from '../../../components/Icon'
+//import UserInfo from '../../../components/UserInfo'
+//import Icon from '../../../components/Icon'
 
 function SuperStars() {
   const dispatch = useDispatch()
@@ -47,9 +47,7 @@ function SuperStars() {
               <div className="circle__container">
                 <div className="circle__center">
                   <div className="circle__center-content">
-                    <div className={styles.userInfo}>
-                      <UserInfo />
-                    </div>
+                    <div className={styles.userInfo}></div>
                   </div>
                 </div>
                 {matrixTypes.map((matrix, i) => {

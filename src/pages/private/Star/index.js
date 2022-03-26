@@ -16,7 +16,6 @@ import { api } from '../../../api'
 
 import TablesElement from './TablesElement'
 import NavBar from '../../../components/layout/Navbar'
-import UserInfo from '../../../components/UserInfo'
 //import Icon from '../../../components/Icon'
 
 function Tables() {
@@ -57,9 +56,7 @@ function Tables() {
               <div className="circle__container">
                 <div className="circle__center">
                   <div className="circle__center-content">
-                    <div className={styles.userInfo}>
-                      <UserInfo />
-                    </div>
+                    <div className={styles.userInfo}></div>
                   </div>
                 </div>
                 {matrixTypes.map((matrix, i) => {

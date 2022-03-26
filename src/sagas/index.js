@@ -10,6 +10,7 @@ import startrekSagas from './startrek.sagas'
 import superstarSagas from './superstar.sagas'
 import starsupSagas from './starsup.sagas'
 import starsSagas from './stars.sagas'
+import matrixUnoQueue from './uno.sagas'
 
 export default function* mainSaga() {
   yield all([
@@ -23,5 +24,6 @@ export default function* mainSaga() {
     superstarSagas(),
     starsupSagas(),
     starsSagas(),
+    matrixUnoQueue(),
   ])
 }

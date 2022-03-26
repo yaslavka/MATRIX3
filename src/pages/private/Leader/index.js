@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Row, Col, Container, Button } from 'reactstrap'
 
 import posterVideo from '../../../scss/media/leader-poster-video.56a4c9bf.jpg'
-import avatar from '../../../scss/media/placeholder.7e85be59.svg'
+import avatar from '../../../scss/media/camera_200.png'
 import video from '../../../scss/media/leader-poster-video.56a4c9bf.jpg'
 
 import NavBar from '../../../components/layout/Navbar'

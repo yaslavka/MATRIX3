@@ -15,6 +15,7 @@ import superstarReducer from '../reducers/superstar.reducer'
 import starsupReducer from '../reducers/starsup.reducer'
 import starsupTableReducer from '../reducers/starsupTable.reducer'
 import starsReducer from '../reducers/stars.reducer'
+import unoReducer from '../reducers/uno.reducer'
 
 const rootReducer = (history) =>
   combineReducers({
@@ -30,6 +31,7 @@ const rootReducer = (history) =>
     starsup: starsupReducer,
     starsupTable: starsupTableReducer,
     stars: starsReducer,
+    uno: unoReducer,
     router: connectRouter(history),
   })
 

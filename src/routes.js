@@ -55,6 +55,9 @@ import Christmas from './pages/private/Casino/components/ChristmasParty'
 import ETRace from './pages/private/Casino/components/ETRaces'
 import Smm from './pages/private/SMM'
 import Snapsocial from './pages/private/SMM/pages/Snapsocial'
+import Matrix from './pages/private/mareix'
+import Tablem from './pages/private/mareix/Table'
+import TableQueuem from './pages/private/mareix/TableQueue'
 
 export const publicRouteConfig = [
   {
@@ -100,6 +103,24 @@ export const panelRouteConfig = [
     id: 'f748dad1-b173-4df0-bce4-6cb87e576637',
     path: [r.news, r.newsItem],
     component: News,
+    exact: true,
+  },
+  {
+    id: '5a02e212143a-028e-4a64-9de7-a8495c4a289f',
+    path: r.matrixs,
+    component: Matrix,
+    exact: true,
+  },
+  {
+    id: '470c1df2-4bf9-4566c41-897a-b7267e53aa68',
+    path: [r.personalTablem, r.tablem],
+    component: Tablem,
+    exact: true,
+  },
+  {
+    id: 'fa4bc3a7-6bea454-47ae-bb00-9bba1f1f3349',
+    path: [r.personalTableQueuem, r.tableQueuem],
+    component: TableQueuem,
     exact: true,
   },
   {

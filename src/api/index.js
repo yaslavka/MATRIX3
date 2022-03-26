@@ -68,6 +68,74 @@ export const api = {
   searchUserByLogin({ user_name, matrix_type }) {
     return baseInstance.get(`/user/find?user_name=${user_name}&matrix_type=${matrix_type}`)
   },
+
+  getMatrixMiniTypes() {
+    return baseInstance.get('/matrix/mini/type')
+  },
+  getMatrixMiniCloneStatTypes() {
+    return baseInstance.get('matrix/uno/clone-stat')
+  },
+  getMatrixMiniStructureByType(type) {
+    return baseInstance.get(`matrix/uno/structure?matrix_type=${type}`)
+  },
+  getMatrixMiniStructureById(id) {
+    return baseInstance.get(`matrix/uno/structure?matrix_id=${id}`)
+  },
+  buyMatrixMini(matrix_id) {
+    return baseInstance.post('matrix/uno/buy', { matrix_id })
+  },
+  getMatrixMiniListForInstall(matrix_type) {
+    return baseInstance.get(`matrix/uno/for-install?matrix_type=${matrix_type}`)
+  },
+  installMatrixMini(matrixInfo) {
+    return baseInstance.post('matrix/uno/install', matrixInfo)
+  },
+  getMatrixMiniClonesCout(matrix_type) {
+    return baseInstance.get(`matrix/uno/clone?matrix_type=${matrix_type}`)
+  },
+  arrangeMatrixMiniClones(matrixClonesInfo) {
+    return baseInstance.post('matrix/uno/install-clone', matrixClonesInfo)
+  },
+  getNeighboringMatricesMini(matrixType) {
+    return baseInstance.get(`matrix/uno/dash-info?matrix_type=${matrixType}`)
+  },
+  setMiniClone(matrixInfo) {
+    return baseInstance.post('matrix/uno/target-install-clone', matrixInfo)
+  },
+  // Matricesx
+  getMatrixUnoTypes() {
+    return baseInstance.get('/matrix/uno/type')
+  },
+  getMatrixUnoCloneStatTypes() {
+    return baseInstance.get('matrix/uno/clone-stat')
+  },
+  getMatrixUnoStructureByType(type) {
+    return baseInstance.get(`matrix/uno/structure?matrix_type=${type}`)
+  },
+  getMatrixUnoStructureById(id) {
+    return baseInstance.get(`matrix/uno/structure?matrix_id=${id}`)
+  },
+  buyMatrixUno(matrix_id) {
+    return baseInstance.post('matrix/uno/buy', { matrix_id })
+  },
+  getMatrixUnoListForInstall(matrix_type) {
+    return baseInstance.get(`matrix/uno/for-install?matrix_type=${matrix_type}`)
+  },
+  installMatrixUno(matrixInfo) {
+    return baseInstance.post('matrix/uno/install', matrixInfo)
+  },
+  getMatrixUnoClonesCout(matrix_type) {
+    return baseInstance.get(`matrix/uno/clone?matrix_type=${matrix_type}`)
+  },
+  arrangeMatrixUnoClones(matrixClonesInfo) {
+    return baseInstance.post('matrix/uno/install-clone', matrixClonesInfo)
+  },
+  getNeighboringMatricesUno(matrixType) {
+    return baseInstance.get(`matrix/uno/dash-info?matrix_type=${matrixType}`)
+  },
+  setUnoClone(matrixInfo) {
+    return baseInstance.post('matrix/uno/target-install-clone', matrixInfo)
+  },
   // Matrices
   getMatrixTypes() {
     return baseInstance.get('/matrix/type')

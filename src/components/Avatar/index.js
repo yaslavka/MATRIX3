@@ -2,10 +2,11 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { Formik, Form, Field } from 'formik'
 import styles from './Avatar.module.scss'
-import avatar from '../../scss/media/placeholder.7e85be59.svg'
+import avatar from '../../scss/media/camera_200.png'
 import { api } from '../../api'
 import * as actions from '../../actions/app.actions'
 import { isValidImageType } from '../../utils'
+import { Input } from 'reactstrap'
 
 const AutoSubmit = ({ initialValues, values, submitForm }) => {
   useEffect(() => {
@@ -36,7 +37,7 @@ export default function Avatar({ url, className }) {
   }
 
   return (
-    <div className={`${styles.Avatar} ${className}`}>
+    <div className={`${className}`}>
       <Formik
         initialValues={{
           avatar: null,
@@ -61,7 +62,8 @@ export default function Avatar({ url, className }) {
             <Field>
               {({ form }) => (
                 <div className={styles.inputWrapper}>
-                  <input
+                  <img src={url || avatar} alt="аватар пользователя" />
+                  <Input
                     type="file"
                     accept="image/png, image/jpeg, image/jpg"
                     onChange={({ target: { files } }) => {
@@ -71,7 +73,6 @@ export default function Avatar({ url, className }) {
                       }
                     }}
                   />
-                  <img src={url || avatar} alt="аватар пользователя" />
                 </div>
               )}
             </Field>

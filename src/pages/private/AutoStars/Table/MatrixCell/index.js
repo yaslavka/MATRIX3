@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import styles from './MatrixCell.module.scss'
-import avatarFallback from '../../../../../scss/media/placeholder.7e85be59.svg'
+import avatarFallback from '../../../../../scss/media/camera_200.png'
 
 const branchingLines = (place) => {
   if (place === 0) {
@@ -14,10 +14,10 @@ const branchingLines = (place) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M1 22V12h90m91 12V12H91m0 0V0" stroke="#8083E6" strokeWidth="1.5" />
+        <path d="M1 52V12h90m91 32V12H91m0 32V12H91m0 0V0" stroke="#FF0F20" strokeWidth="2" />
       </svg>
     )
-  } else if (place === 1 || place === 2) {
+  } else if (place === 1 || place === 2 || place === 3) {
     return (
       <svg
         className={styles.branchingLines}

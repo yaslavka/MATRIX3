@@ -15601,12 +15601,12 @@ video {
 
 .leader__image {
   border-radius: 25px;
-  border: 10px solid #2a007200;
-  box-shadow: 0 0 10px #2a007200;
-  overflow: hidden;
+  border: 10px solid rgba(42, 0, 114, 0);
+  box-shadow: 0 0 10px rgba(201, 3, 186, 0);
+  overflow: inherit;
   margin: 0 auto;
-  width: 203px;
-  height: 203px
+  width: 250px;
+  height: 250px;
 }
 
 .leader__image img {

@@ -5,18 +5,18 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import styles from './AutoStars.module.scss'
-import car from '../../../scss/media/auto-stars-car.ae772906.gif'
-import slogan from '../../../scss/media/premium-star.3dd36913.svg'
-import pdfPreview from '../../../scss/media/pdf-preview-premiumstars.e1c214f4.jpg'
-import carLarge from '../../../scss/media/auto-stars-car-large.0b93bf94.gif'
-import pptRU from '../../../static/documents/star/Новый текстовый документ.txt'
-import pptES from '../../../static/documents/star/Новый текстовый документ.txt'
+//import car from '../../../scss/media/auto-stars-car.ae772906.gif'
+//import slogan from '../../../scss/media/premium-star.3dd36913.svg'
+//import pdfPreview from '../../../scss/media/pdf-preview-premiumstars.e1c214f4.jpg'
+//import carLarge from '../../../scss/media/auto-stars-car-large.0b93bf94.gif'
+//import pptRU from '../../../static/documents/star/Новый текстовый документ.txt'
+//import pptES from '../../../static/documents/star/Новый текстовый документ.txt'
 import { api } from '../../../api'
 import { matrixActions } from '../../../store/matrix/actions'
 
-import UserInfo from '../../../components/UserInfo'
+//import UserInfo from '../../../components/UserInfo'
 import NavBar from '../../../components/layout/Navbar'
-import Icon from '../../../components/Icon'
+//import Icon from '../../../components/Icon'
 
 export default function AutoStars() {
   const [matrixTypes, setMatrixTypes] = useState(null)
@@ -157,7 +157,6 @@ export default function AutoStars() {
                 </div>
               </div>
             )}
-            <UserInfo />
             <br />
             <br />
             <br />
