@@ -44,7 +44,7 @@ export default function MatrixCell({ place, info, isActive, onDoubleClick }) {
       // eslint-disable-next-line react/prop-types
       if (info && info.id) {
         // eslint-disable-next-line react/prop-types
-        history.push(`/matrixs/${info.id}`)
+        history.push(`/pegasmini/${info.id}`)
       } else {
         onDoubleClick()
       }

@@ -16,19 +16,19 @@ import { api } from '../../../api'
 
 import TablesElement from './TablesElement'
 import NavBar from '../../../components/layout/Navbar'
-import UserInfo from '../../../components/UserInfo'
+//import UserInfo from '../../../components/UserInfo'
 //import Icon from '../../../components/Icon'
 
-function Matrix() {
+function Matrixmini() {
   const dispatch = useDispatch()
   const [matrixTypes, setMatrixTypes] = useState([])
 
   useEffect(() => {
     api
-      .getMatrixCloneStatTypes()
+      .getMatrixMiniCloneStatTypes()
       .then((cloneStats) => {
         api
-          .getMatrixTypes()
+          .getMatrixMiniTypes()
           .then((response) => {
             if (!isEmpty(cloneStats.items) && !isEmpty(response.items)) {
               const newArrayItems = response.items.map((type, index) => ({
@@ -67,7 +67,7 @@ function Matrix() {
                   return (
                     <TablesElement
                       key={i.toString()}
-                      urlPrefix="personal-matrixs"
+                      urlPrefix="personal-pegasmini"
                       transform={transform}
                       matrix={matrix}
                     />
@@ -82,4 +82,4 @@ function Matrix() {
   )
 }
 
-export default Matrix
+export default Matrixmini

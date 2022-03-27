@@ -63,7 +63,7 @@ export const api = {
     return baseInstance.get('/user')
   },
   updateAvatar(avatar) {
-    return baseInstance.post('/user/avatar', createFormDataObj({ avatar }))
+    return baseInstance.post('user/avatar', createFormDataObj({ avatar }))
   },
   searchUserByLogin({ user_name, matrix_type }) {
     return baseInstance.get(`/user/find?user_name=${user_name}&matrix_type=${matrix_type}`)
@@ -73,34 +73,34 @@ export const api = {
     return baseInstance.get('/matrix/mini/type')
   },
   getMatrixMiniCloneStatTypes() {
-    return baseInstance.get('matrix/uno/clone-stat')
+    return baseInstance.get('matrix/mini/clone-stat')
   },
   getMatrixMiniStructureByType(type) {
-    return baseInstance.get(`matrix/uno/structure?matrix_type=${type}`)
+    return baseInstance.get(`matrix/mini/structure?matrix_type=${type}`)
   },
   getMatrixMiniStructureById(id) {
-    return baseInstance.get(`matrix/uno/structure?matrix_id=${id}`)
+    return baseInstance.get(`matrix/mini/structure?matrix_id=${id}`)
   },
   buyMatrixMini(matrix_id) {
-    return baseInstance.post('matrix/uno/buy', { matrix_id })
+    return baseInstance.post('matrix/mini/buy', { matrix_id })
   },
   getMatrixMiniListForInstall(matrix_type) {
-    return baseInstance.get(`matrix/uno/for-install?matrix_type=${matrix_type}`)
+    return baseInstance.get(`matrix/mini/for-install?matrix_type=${matrix_type}`)
   },
   installMatrixMini(matrixInfo) {
-    return baseInstance.post('matrix/uno/install', matrixInfo)
+    return baseInstance.post('matrix/mini/install', matrixInfo)
   },
   getMatrixMiniClonesCout(matrix_type) {
-    return baseInstance.get(`matrix/uno/clone?matrix_type=${matrix_type}`)
+    return baseInstance.get(`matrix/mini/clone?matrix_type=${matrix_type}`)
   },
   arrangeMatrixMiniClones(matrixClonesInfo) {
-    return baseInstance.post('matrix/uno/install-clone', matrixClonesInfo)
+    return baseInstance.post('matrix/mini/install-clone', matrixClonesInfo)
   },
   getNeighboringMatricesMini(matrixType) {
-    return baseInstance.get(`matrix/uno/dash-info?matrix_type=${matrixType}`)
+    return baseInstance.get(`matrix/mini/dash-info?matrix_type=${matrixType}`)
   },
   setMiniClone(matrixInfo) {
-    return baseInstance.post('matrix/uno/target-install-clone', matrixInfo)
+    return baseInstance.post('matrix/mini/target-install-clone', matrixInfo)
   },
   // Matricesx
   getMatrixUnoTypes() {

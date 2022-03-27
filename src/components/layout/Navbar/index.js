@@ -42,6 +42,12 @@ const navbarLinks = [
     icon: news,
   },
   {
+    label: 'Пегас mini',
+    route: routes.matrixmini,
+    isDisabled: false,
+    icon: logo,
+  },
+  {
     label: 'Пегас uno',
     route: routes.matrixs,
     isDisabled: false,

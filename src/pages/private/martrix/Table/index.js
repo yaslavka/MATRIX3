@@ -23,7 +23,7 @@ import BuyMatrixModal from './BuyMatrixModal'
 import PartnersClonesModal from './PartnersClonesModal'
 
 // eslint-disable-next-line react/prop-types
-export default function Tablem({ location: { state = {}, pathname } }) {
+export default function Tablemini({ location: { state = {}, pathname } }) {
   const history = useHistory()
   const dispatch = useDispatch()
   const { id } = useParams()
@@ -45,7 +45,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
     if (matrixInfo && matrixInfo.id) {
       setBuyingStatus({ type: 'pending', message: '' })
       api
-        .buyMatrix(Number(matrixInfo.id))
+        .buyMatrixMini(Number(matrixInfo.id))
         .then(() => {
           setBuyingStatus({
             type: 'success',
@@ -63,7 +63,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
             .catch(() => {})
 
           api
-            .getMatrixTypes()
+            .getMatrixMiniTypes()
             .then((response) => {
               const filter = response.items.find((x) => x.id === matrixInfo.id)
               if (filter) {
@@ -73,7 +73,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
             .catch(() => {})
 
           api
-            .getMatrixStructureByType(matrixInfo.id)
+            .getMatrixMiniStructureByType(matrixInfo.id)
             .then((response) => {
               if (response.items) {
                 setMatrixTree(response.items)
@@ -156,7 +156,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
       // eslint-disable-next-line react/prop-types
       if (pathname.startsWith('/personal-matrixs')) {
         api
-          .getMatrixStructureByType(matrixInfo.id)
+          .getMatrixMiniStructureByType(matrixInfo.id)
           .then((response) => {
             if (response.items) {
               setMatrixTree(response.items)
@@ -166,7 +166,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
           .catch(() => {})
       } else {
         api
-          .getMatrixStructureById(id)
+          .getMatrixMiniStructureById(id)
           .then((response) => {
             if (response.items) {
               setMatrixTree(response.items)
@@ -226,7 +226,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
   useEffect(() => {
     if (matrixInfo && matrixInfo.isActive && isFetching) {
       api
-        .getMatrixStructureByType(matrixInfo.id)
+        .getMatrixMiniStructureByType(matrixInfo.id)
         .then((response) => {
           if (response.items) {
             setMatrixTree(response.items)
@@ -236,7 +236,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
         .catch()
     } else if (id) {
       api
-        .getMatrixStructureById(id)
+        .getMatrixMiniStructureById(id)
         .then((response) => {
           if (response.items) {
             setMatrixTree(response.items)
@@ -249,7 +249,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
   useEffect(() => {
     if (matrixInfo) {
       api
-        .getNeighboringMatrices(matrixInfo.id)
+        .getNeighboringMatricesMini(matrixInfo.id)
         .then((response) => {
           if (Array.isArray(response.items) && response.items.length > 0) {
             const result = response.items.map(({ name, id }) => ({
@@ -266,7 +266,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
   useEffect(() => {
     if (!matricesList) {
       api
-        .getMatrixTypess()
+        .getMatrixMiniTypes()
         .then((response) => {
           if (Array.isArray(response.items)) {
             dispatch(matrixActions.saveUserMatrices(response.items))
@@ -342,9 +342,9 @@ export default function Tablem({ location: { state = {}, pathname } }) {
       let newRoute = '/'
 
       if (matrixInfo && matrixInfo.isActive && !id) {
-        newRoute = `/personal-matrixs/${matrixInfo.id}${route}`
+        newRoute = `/personal-pegasmini/${matrixInfo.id}${route}`
       } else if (id) {
-        newRoute = `/matrixs/${id}${route}`
+        newRoute = `/pegasmini/${id}${route}`
       }
       return newRoute
     },
@@ -377,7 +377,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
                 className={styles.matrixSelect}
                 onChange={(value) => {
                   if (value) {
-                    history.push(`/matrixs/${value}`)
+                    history.push(`/pegasmini/${value}`)
                   }
                 }}
               />

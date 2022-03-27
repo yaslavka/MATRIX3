@@ -16,7 +16,7 @@ import StarRating from '../../../components/StarRating'
 import { Spinner } from 'react-bootstrap'
 
 // eslint-disable-next-line react/prop-types
-const TableQueu = ({ location: { state = {} } }) => {
+const TableQuemini = ({ location: { state = {} } }) => {
   const { type } = useParams()
   const dispatch = useDispatch()
 
@@ -30,9 +30,9 @@ const TableQueu = ({ location: { state = {} } }) => {
     (route = '') => {
       let newRoute = '/'
       if (matrixInfo && matrixInfo.id) {
-        newRoute = `/personal-matrixs/${matrixInfo.id}${route}`
+        newRoute = `/personal-pegasmini/${matrixInfo.id}${route}`
       } else if (type) {
-        newRoute = `/matrixs/${type}${route}`
+        newRoute = `/pegasmini/${type}${route}`
       }
       return newRoute
     },
@@ -41,18 +41,18 @@ const TableQueu = ({ location: { state = {} } }) => {
 
   useEffect(() => {
     if (matrixInfo && matrixInfo.id) {
-      dispatch(actions.matrixUnoQueue(matrixInfo.id, { ...state }))
+      dispatch(actions.matrixMiniQueue(matrixInfo.id, { ...state }))
     } else if (type) {
-      dispatch(actions.matrixUnoQueue(type, { ...state }))
+      dispatch(actions.matrixMiniQueue(type, { ...state }))
     }
   }, [dispatch, type, matrixInfo, state])
 
   const handleChangeLine = useCallback(
     (line) => {
       if (matrixInfo && matrixInfo.id) {
-        dispatch(actions.setMatrixQueueLine(line, matrixInfo.id))
+        dispatch(actions.setMatrixMiniQueueLine(line, matrixInfo.id))
       } else if (type) {
-        dispatch(actions.setMatrixQueueLine(line, type))
+        dispatch(actions.setMatrixMiniQueueLine(line, type))
       }
     },
     [dispatch, type, matrixInfo],
@@ -61,9 +61,9 @@ const TableQueu = ({ location: { state = {} } }) => {
   const handleOnChangePage = useCallback(
     (page) => {
       if (matrixInfo && matrixInfo.id) {
-        dispatch(actions.setMatrixQueuePage(page, matrixInfo.id))
+        dispatch(actions.setMatrixMiniQueuePage(page, matrixInfo.id))
       } else if (type) {
-        dispatch(actions.setMatrixQueuePage(page, type))
+        dispatch(actions.setMatrixMiniQueuePage(page, type))
       }
     },
     [dispatch, type, matrixInfo],
@@ -72,9 +72,9 @@ const TableQueu = ({ location: { state = {} } }) => {
   const handleOnChangeSearch = useCallback(
     (event) => {
       if (matrixInfo && matrixInfo.id) {
-        dispatch(actions.setMatrixQueueSearch(event.target.value, matrixInfo.id))
+        dispatch(actions.setMatrixMiniQueueSearch(event.target.value, matrixInfo.id))
       } else if (type) {
-        dispatch(actions.setMatrixQueueSearch(event.target.value, type))
+        dispatch(actions.setMatrixMiniQueueSearch(event.target.value, type))
       }
     },
     [dispatch, type, matrixInfo],
@@ -142,7 +142,7 @@ const TableQueu = ({ location: { state = {} } }) => {
                   <Col key={user.id} lg={4}>
                     <Link
                       to={{
-                        pathname: `/matrixs/${user.id}`,
+                        pathname: `/pegasmini/${user.id}`,
                         state: {
                           query: { line, offset, name },
                           meta: { page },
@@ -213,4 +213,4 @@ const TableQueu = ({ location: { state = {} } }) => {
   )
 }
 
-export default TableQueu
+export default TableQuemini

@@ -58,6 +58,9 @@ import Snapsocial from './pages/private/SMM/pages/Snapsocial'
 import Matrix from './pages/private/mareix'
 import Tablem from './pages/private/mareix/Table'
 import TableQueuem from './pages/private/mareix/TableQueue'
+import Matrixmini from './pages/private/martrix'
+import Tablemini from './pages/private/martrix/Table'
+import TableQuemini from './pages/private/martrix/TableQueue'
 
 export const publicRouteConfig = [
   {
@@ -103,6 +106,24 @@ export const panelRouteConfig = [
     id: 'f748dad1-b173-4df0-bce4-6cb87e576637',
     path: [r.news, r.newsItem],
     component: News,
+    exact: true,
+  },
+  {
+    id: '5a02e43a-028e-4a64-9de7-a84fgf95c4a289f',
+    path: r.matrixmini,
+    component: Matrixmini,
+    exact: true,
+  },
+  {
+    id: '470c1df2-4bf9-4c41-897a-b7267ehfd53aa68',
+    path: [r.personalTablemini, r.tablemmini],
+    component: Tablemini,
+    exact: true,
+  },
+  {
+    id: 'fa4bc3a7-6bea-47ae-bb00-9bba1fddfd1f3349',
+    path: [r.personalTableQueuemini, r.tableQueuemini],
+    component: TableQuemini,
     exact: true,
   },
   {
