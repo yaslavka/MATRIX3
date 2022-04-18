@@ -21,7 +21,7 @@ const MainPage = ({ comments, userPermissions }) => {
   return (
     <>
       <h1 className={styles.mainTitle}>
-        Стань участником образовательной программы <span>Stars Academy</span>
+        Стань владельцем уникального торгового бота <span>KOSMOBOT</span>
       </h1>
       <a
         href="https://www.youtube.com/watch?v=OL4_3NmFHJI"
@@ -35,7 +35,6 @@ const MainPage = ({ comments, userPermissions }) => {
           <path d="M24 22v13.5l10.6-6.8L24.1 22z" fill="#11032C" />
         </svg>
       </a>
-      {/* eslint-disable-next-line react/prop-types */}
       {userPermissions.canCreateForm ? (
         <Link to={routes.educationForm}>
           <Button className={styles.formButton} color="perrywinkle" size="medium">
@@ -43,11 +42,11 @@ const MainPage = ({ comments, userPermissions }) => {
           </Button>
         </Link>
       ) : (
-        <a rel="noreferrer" target="_blank" href="/">
+        <Link rel="noreferrer" target="_blank" to={routes.educationForm}>
           <Button className={styles.formButton} color="transparent" size="medium">
             Заказать Торгового бота
           </Button>
-        </a>
+        </Link>
       )}
 
       <h2 className={styles.title}>Отзывы</h2>
@@ -88,7 +87,6 @@ const MainPage = ({ comments, userPermissions }) => {
                 </svg>
               }
             >
-              {/* eslint-disable-next-line react/prop-types */}
               {comments.map(({ avatar, text, user_name }) => (
                 // eslint-disable-next-line react/jsx-key
                 <Carousel.Item>
@@ -165,7 +163,6 @@ export default function Education() {
       <Container>
         <Row>
           <Col className="d-none d-xl-block" xl={3}>
-            <div className={styles.userInfo}></div>
             <NavBar />
           </Col>
           <Col xs={12} xl={9} className="position-static">
