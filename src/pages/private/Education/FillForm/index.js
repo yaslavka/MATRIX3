@@ -15,24 +15,22 @@ import Button from '../../../../components/OldButton'
 import Select from '../../../../components/Select'
 
 const experienceVariants = [
-  { label: 'Меньше 1 года', value: 'Меньше 1 года' },
-  { label: '1-3 года', value: '1-3 года' },
-  { label: '3-5 лет', value: '3-5 лет' },
-  { label: 'Больше 5 лет', value: 'Больше 5 лет' },
+  { label: 'Ubuntu-20.04', value: 'Ubuntu-20.04' },
+  { label: 'Windows-7', value: 'Windows-7' },
+  { label: 'Windows-8', value: 'Windows-8' },
+  { label: 'Windows-8', value: 'Windows-8' },
 ]
 
 const projectsVariants = [
-  { label: 'Продуктовые', value: 'Продуктовые' },
-  { label: 'Матрицы', value: 'Матрицы' },
-  { label: 'Инвестиционные', value: 'Инвестиционные' },
+  { label: 'Ubuntu-20.04-64bit', value: 'Ubuntu-20.04-64bit' },
+  { label: 'Ubuntu-20.04-32bit', value: 'Ubuntu-20.04-32bit' },
+  { label: 'Windows-7-64bit', value: 'Windows-7-64bit' },
+  { label: 'Windows-7-32bit', value: 'Windows-7-32bit' },
+  { label: 'Windows-8-64bit', value: 'Windows-8-64bit' },
+  { label: 'Windows-8-32bit', value: 'Windows-8-32bit' },
+  { label: 'Windows-10-32bit', value: 'Windows-10-32bit' },
 ]
 
-const teamMembersVariants = [
-  { label: 'До 10', value: 'До 10' },
-  { label: 'Более 10', value: 'Более 10' },
-  { label: 'Более 50', value: 'Более 50' },
-  { label: 'Более 100', value: 'Более 100' },
-]
 
 const commentStatuses = {
   success:
@@ -166,7 +164,7 @@ export default function FillForm() {
                 <div className={styles.field}>
                   <Select
                     className={styles.select}
-                    placeholder="Стаж в сетевом*"
+                    placeholder="Выберите операционную системму*"
                     values={experienceVariants}
                     onChange={(value) => {
                       setFieldValue('experience', value)
@@ -179,7 +177,7 @@ export default function FillForm() {
                 <div className={styles.field}>
                   <Select
                     className={styles.select}
-                    placeholder="В каких проектах участвовал*"
+                    placeholder="какая разрядность вашей системмы?*"
                     values={projectsVariants}
                     onChange={(value) => {
                       setFieldValue('projects', value)
@@ -187,19 +185,6 @@ export default function FillForm() {
                   />
                   {touched.projects && errors.projects && (
                     <p className={styles.error}>{errors.projects}</p>
-                  )}
-                </div>
-                <div className={styles.field}>
-                  <Select
-                    className={styles.select}
-                    placeholder="Кол-во в команде*"
-                    values={teamMembersVariants}
-                    onChange={(value) => {
-                      setFieldValue('members', value)
-                    }}
-                  />
-                  {touched.members && errors.members && (
-                    <p className={styles.error}>{errors.members}</p>
                   )}
                 </div>
                 <Button type="submit" color="perrywinkle" size="medium">
