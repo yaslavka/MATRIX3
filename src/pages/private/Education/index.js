@@ -35,6 +35,7 @@ const MainPage = ({ comments, userPermissions }) => {
           <path d="M24 22v13.5l10.6-6.8L24.1 22z" fill="#11032C" />
         </svg>
       </a>
+      {/* eslint-disable-next-line react/prop-types */}
       {userPermissions.canCreateForm ? (
         <Link to={routes.educationForm}>
           <Button className={styles.formButton} color="perrywinkle" size="medium">
@@ -87,6 +88,7 @@ const MainPage = ({ comments, userPermissions }) => {
                 </svg>
               }
             >
+              {/* eslint-disable-next-line react/prop-types */}
               {comments.map(({ avatar, text, user_name }) => (
                 // eslint-disable-next-line react/jsx-key
                 <Carousel.Item>

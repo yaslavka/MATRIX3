@@ -31,7 +31,6 @@ const projectsVariants = [
   { label: 'Windows-10-32bit', value: 'Windows-10-32bit' },
 ]
 
-
 const commentStatuses = {
   success:
     'Спасибо, Ваша заявка принята! <br /> <br /> Присоеденяйтесь к нашему <br /> <br /> <a rel="noreferrer" target="_blank" href="https://t.me/SchooL_Stars_bot">Присоединяйтесь к нашему Чат-боту</a>',
