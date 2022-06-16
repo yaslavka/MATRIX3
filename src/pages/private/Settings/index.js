@@ -2,7 +2,6 @@ import React from 'react'
 import { Row, Col, Container } from 'reactstrap'
 
 import NavBar from '../../../components/layout/Navbar'
-import UserInfo from '../../../components/UserInfo'
 
 import FinancePassword from './FinancePassword'
 import ChangePassword from './ChangePassword'
@@ -16,7 +15,6 @@ function Settings() {
     <Container className="root-page">
       <Row>
         <Col xl={3} className="d-none d-xl-block">
-          <UserInfo />
           <NavBar />
         </Col>
         <Col>

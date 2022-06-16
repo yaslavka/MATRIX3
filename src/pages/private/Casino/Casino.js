@@ -38,7 +38,7 @@ function Casino() {
             <span>До запуска осталось</span>
           </div>
           <div className="startrek__title">
-            <CountdownTimer countdownTimestampMs={1659983662000} />
+            <CountdownTimer countdownTimestampMs={16599836620000} />
           </div>
           <h1 className="startrek__title1">ИГРЫ</h1>
           <SimpleBar style={{ height: '44%', width: '100%' }}>

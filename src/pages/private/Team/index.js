@@ -10,7 +10,6 @@ import * as actions from '../../../actions/team.actions'
 import arrowRight from '../../../scss/media/angle-right.2219c635.svg'
 import arrowLeft from '../../../scss/media/angle-left.309b1344.svg'
 import NavBar from '../../../components/layout/Navbar'
-import UserInfo from '../../../components/UserInfo'
 import TeamMember from './TeamMember'
 import { Spinner } from 'react-bootstrap'
 
@@ -44,7 +43,6 @@ function Team() {
     <Container className="root-page">
       <Row>
         <Col xl={3} className="d-none d-xl-block">
-          <UserInfo />
           <NavBar />
         </Col>
         <Col>

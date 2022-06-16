@@ -14,10 +14,14 @@ const branchingLines = (place) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M1 52V12h90m91 32V12H91m0 32V12H91m0 0V0" stroke="#FF0F20" strokeWidth="2" />
+        <path
+          d="M1 22V12h90m91 12V12H91m0 0V0"
+          stroke="#8083E6"
+          strokeWidth="1.5"
+        />
       </svg>
-    )
-  } else if (place === 1 || place === 2 || place === 3) {
+    );
+  } else if (place === 1 || place === 2) {
     return (
       <svg
         className={styles.branchingLines}
@@ -27,11 +31,15 @@ const branchingLines = (place) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <path d="M1 18v-8h45m45 9v-9H46m0 0V1" stroke="#8083E6" strokeWidth="1.5" />
+        <path
+          d="M1 18v-8h45m45 9v-9H46m0 0V1"
+          stroke="#8083E6"
+          strokeWidth="1.5"
+        />
       </svg>
-    )
+    );
   }
-}
+};
 
 // eslint-disable-next-line react/prop-types
 export default function MatrixCell({
