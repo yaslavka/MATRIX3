@@ -358,30 +358,8 @@ export default function Table({ location: { state = {}, pathname } }) {
           {matrixInfo && <h1 className={styles.title}>Пегас - {matrixInfo.name}</h1>}
           {backRouteElement}
         </div>
-        {matrixInfo && matrixInfo.isActive && (
-          <nav className={styles.nav}>
-            <NavLink to={navRoute()} exact activeClassName={styles.active}>
-              Структура
-            </NavLink>
-            <NavLink to={navRoute('/queue')} exact activeClassName={styles.active}>
-              Очередь
-            </NavLink>
-          </nav>
-        )}
         <div className={styles.container}>
           <div className={styles.sidebar}>
-            {selectItems && (
-              <Select
-                values={selectItems}
-                placeholder="Мои клоны"
-                className={styles.matrixSelect}
-                onChange={(value) => {
-                  if (value) {
-                    history.push(`/table/${value}`)
-                  }
-                }}
-              />
-            )}
             {id && (
               <div className="d-none d-xl-block">
                 <Button
@@ -409,20 +387,6 @@ export default function Table({ location: { state = {}, pathname } }) {
                     Купить
                   </Button>
                 )}
-                <Row>
-                  <Col>
-                    {matrixInfo.isActive && (
-                      <Button
-                        onClick={showClonesModal}
-                        className="w-100"
-                        color="violet-blue"
-                        size="small"
-                      >
-                        Мои клоны
-                      </Button>
-                    )}
-                  </Col>
-                </Row>
               </div>
             )}
           </div>
