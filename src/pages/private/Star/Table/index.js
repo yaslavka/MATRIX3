@@ -502,16 +502,6 @@ export default function Table({ location: { state = {}, pathname } }) {
                     Купить
                   </Button>
                 )}
-                {matrixInfo.isActive && (
-                  <Button
-                    onClick={showClonesModal}
-                    className="w-100"
-                    color="violet-blue"
-                    size="small"
-                  >
-                    Мои клоны
-                  </Button>
-                )}
               </div>
             )}
           </div>
