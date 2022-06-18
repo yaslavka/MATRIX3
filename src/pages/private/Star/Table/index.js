@@ -391,13 +391,6 @@ export default function Table({ location: { state = {}, pathname } }) {
             )}
           </div>
           <div className={styles.content}>
-            <SearchSelect
-              className={styles.searchSelect}
-              values={searchUsers}
-              placeholder="Поиск партнера по логину"
-              onInput={setCurrentSearchValue}
-              onChange={redirectToUserMatrix}
-            />
             <div className="d-xl-none mt-4">
               <Button
                 onClick={handleUpMatrix}
