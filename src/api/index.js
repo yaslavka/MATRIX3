@@ -70,16 +70,16 @@ export const api = {
   },
 
   getMatrixMiniTypes() {
-    return baseInstance.get('/matrix/mini/type')
+    return baseInstance.get('/matrix/type')
   },
   getMatrixMiniCloneStatTypes() {
-    return baseInstance.get('matrix/mini/clone-stat')
+    return baseInstance.get('matrix/clone-stat')
   },
   getMatrixMiniStructureByType(type) {
-    return baseInstance.get(`matrix/mini/structure?matrix_type=${type}`)
+    return baseInstance.get(`matrix/structure?matrix_type=${type}`)
   },
   getMatrixMiniStructureById(id) {
-    return baseInstance.get(`matrix/mini/structure?matrix_id=${id}`)
+    return baseInstance.get(`matrix/structure?matrix_id=${id}`)
   },
   buyMatrixMini(matrix_id) {
     return baseInstance.post('matrix/mini/buy', { matrix_id })
@@ -104,16 +104,16 @@ export const api = {
   },
   // Matricesx
   getMatrixUnoTypes() {
-    return baseInstance.get('/matrix/uno/type')
+    return baseInstance.get('/matrix/type')
   },
   getMatrixUnoCloneStatTypes() {
-    return baseInstance.get('matrix/uno/clone-stat')
+    return baseInstance.get('matrix/clone-stat')
   },
   getMatrixUnoStructureByType(type) {
-    return baseInstance.get(`matrix/uno/structure?matrix_type=${type}`)
+    return baseInstance.get(`matrix/structure?matrix_type=${type}`)
   },
   getMatrixUnoStructureById(id) {
-    return baseInstance.get(`matrix/uno/structure?matrix_id=${id}`)
+    return baseInstance.get(`matrix/structure?matrix_id=${id}`)
   },
   buyMatrixUno(matrix_id) {
     return baseInstance.post('matrix/uno/buy', { matrix_id })
@@ -216,6 +216,9 @@ export const api = {
   },
   createPayeerPay(payInfo) {
     return baseInstance.post('wallet/create-payeer-pay', payInfo)
+  },
+  createBitcoinPay(payInfo) {
+    return baseInstance.post('wallet/create-btc-pay', payInfo)
   },
   getUpperStructureById(matrixId) {
     return baseInstance.get(`matrix/structure-upper?matrix_id=${matrixId}`)

@@ -56,7 +56,7 @@ function Finances() {
                             .format(
                               (userInfo.balance > -1 && userInfo.balance) || 0,
                             )
-                            .replace('₽', 'ST')}
+                            .replace('₽', 'RUB')}
                         </h3>
                         <br />
                         <Button

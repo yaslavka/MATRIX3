@@ -5,6 +5,7 @@ import * as yup from 'yup'
 import { api } from '../../../api'
 
 import payeerLogo from '../../../scss/media/payeer-logo.8aa750cc.svg'
+import bitcoinLogo from '../../../scss/media/Bitcoin_logo.svg'
 import Input from '../../../components/Input'
 
 const initialValues = { amount: '' }
@@ -32,6 +33,16 @@ function ReplenishmentOfMoney() {
   const submitCreatePayeerPayForm = ({ amount }) => {
     api
       .createPayeerPay({ amount: Number(amount) })
+      .then((response) => {
+        if (response.url) {
+          window.location.replace(response.url)
+        }
+      })
+      .catch(() => {})
+  }
+  const submitCreateBitcoinPayForm = ({ amount }) => {
+    api
+      .createBitcoinPay({ amount: Number(amount) })
       .then((response) => {
         if (response.url) {
           window.location.replace(response.url)
@@ -83,6 +94,31 @@ function ReplenishmentOfMoney() {
               <div className="card__body">
                 <div className="pay-image">
                   <img src={payeerLogo} alt="Payeer" />
+                </div>
+                <FormGroup>
+                  <Field name="amount" type="text" placeholder="Сумма" component={Input} />
+                </FormGroup>
+              </div>
+              <div className="card__footer">
+                <Button type="submit" disabled={!(isValid && dirty)} color="primary" block>
+                  Подтвердить
+                </Button>
+              </div>
+            </Form>
+          )}
+        </Formik>
+      </Col>
+      <Col lg={6}>
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={submitCreateBitcoinPayForm}
+        >
+          {({ isValid, dirty }) => (
+            <Form className="card">
+              <div className="card__body">
+                <div className="">
+                  <img src={bitcoinLogo} alt="Payeer" />
                 </div>
                 <FormGroup>
                   <Field name="amount" type="text" placeholder="Сумма" component={Input} />
