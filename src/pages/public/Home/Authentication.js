@@ -28,7 +28,7 @@ function Authentication() {
               to={routes.signUp}
               className="authentication__link button button--violet authentication__btn"
             >
-              {t('Ркгистрация')}
+              {t('Регистрация')}
             </Link>
             <Link to={routes.signIn} className="authentication__link button authentication__btn">
               {t('Вход')}
