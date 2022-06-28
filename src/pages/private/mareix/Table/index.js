@@ -154,7 +154,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
     setVisiblePartnerModal(false)
     setTimeout(() => {
       // eslint-disable-next-line react/prop-types
-      if (pathname.startsWith('/personal-matrixs')) {
+      if (pathname.startsWith('/personal-matrix')) {
         api
           .getMatrixUnoStructureByType(matrixInfo.id)
           .then((response) => {
@@ -195,14 +195,14 @@ export default function Tablem({ location: { state = {}, pathname } }) {
           const prevMatrix = matricesList.find((matrix) => matrix.id === matrixInfo.id - 1)
           setIsFetching(true)
           dispatch(matrixActions.saveCurrentMatrix(prevMatrix))
-          history.push(`/personal-matrixs/${matrixInfo.id - 1}`)
+          history.push(`/personal-matrix/${matrixInfo.id - 1}`)
         }
       } else {
         if (matrixInfo.id !== 8) {
           const nextMatrix = matricesList.find((matrix) => matrix.id === matrixInfo.id + 1)
           setIsFetching(true)
           dispatch(matrixActions.saveCurrentMatrix(nextMatrix))
-          history.push(`/personal-matrixs/${matrixInfo.id + 1}`)
+          history.push(`/personal-matrix/${matrixInfo.id + 1}`)
         }
       }
     }
@@ -219,7 +219,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
   }
 
   const redirectToUserMatrix = (matrixId) => {
-    history.push(`/matrixs/${matrixId}`)
+    history.push(`/matrix/${matrixId}`)
     setSearchUsers([])
   }
 
