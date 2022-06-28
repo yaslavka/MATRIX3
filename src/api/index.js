@@ -81,6 +81,9 @@ export const api = {
   getMatrixMiniStructureById(id) {
     return baseInstance.get(`matrix/mini/structure?matrix_id=${id}`)
   },
+  getUpperStructureMiniById(matrixId) {
+    return baseInstance.get(`matrix/mini/structure-upper?matrix_id=${matrixId}`)
+  },
   buyMatrixMini(matrix_id) {
     return baseInstance.post('matrix/mini/buy', { matrix_id })
   },
@@ -105,6 +108,9 @@ export const api = {
   // Matricesx
   getMatrixUnoTypes() {
     return baseInstance.get('/matrix/uno/type')
+  },
+  getUpperStructureunoById(matrixId) {
+    return baseInstance.get(`matrix/uno/structure-upper?matrix_id=${matrixId}`)
   },
   getMatrixUnoCloneStatTypes() {
     return baseInstance.get('matrix/uno/clone-stat')

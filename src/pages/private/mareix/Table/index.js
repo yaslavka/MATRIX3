@@ -302,7 +302,7 @@ export default function Tablem({ location: { state = {}, pathname } }) {
   const handleUpMatrix = () => {
     if (id) {
       api
-        .getUpperStructureById(id)
+        .getUpperStructureunoById(id)
         .then((response) => {
           if (response.items) {
             setMatrixTree(response.items)

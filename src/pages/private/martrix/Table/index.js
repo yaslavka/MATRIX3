@@ -302,7 +302,7 @@ export default function Tablemini({ location: { state = {}, pathname } }) {
   const handleUpMatrix = () => {
     if (id) {
       api
-        .getUpperStructureById(id)
+        .getUpperStructureMiniById(id)
         .then((response) => {
           if (response.items) {
             setMatrixTree(response.items)
