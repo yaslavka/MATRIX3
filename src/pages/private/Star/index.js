@@ -56,7 +56,6 @@ function Tables() {
               <div className="circle__container">
                 <div className="circle__center">
                   <div className="circle__center-content">
-                    <div className={styles.userInfo}></div>
                   </div>
                 </div>
                 {matrixTypes.map((matrix, i) => {

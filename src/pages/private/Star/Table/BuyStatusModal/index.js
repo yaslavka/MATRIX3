@@ -39,7 +39,7 @@ export default function BuyStatusModal({ status, onClose }) {
         </Row>
         <Row>
           <Col xs={12} className="d-xl-flex justify-content-between">
-            Не достаточно средств
+            Оплата прошла успешно
           </Col>
         </Row>
       </Container>
